@@ -1,14 +1,21 @@
 <html>
 <header>
-<title>Welcome to my home page</title>
+<title>Unbounding Box Queries using MapReduce</title>
 </header>
 <body>
-<h1>Welcome to my home page</h1>
+<h1>Unbounding Box Queries using MapReduce</h1>
 
 <form method="POST" action="/send">
-<label>Insert your name: </label>
-<input type="text" name="your_name"/>
-<input type="submit" value="Send"/>
+<label>Mapper:Enter the latitude:</label>
+<input type="text" name="lat"/><br>
+<label>Mapper:Enter the longitude:</label>
+<input type="text" name="lon"/><br>
+<label>Reducer:Enter the Amenity type:</label>
+<input type="text" name="type"/><br>
+<label>MapReducer:Enter the output file name:</label>
+<input type="text" name="out"/>
+
+<input type="submit" value="Send"/><br>
 </form>
 
 </body>

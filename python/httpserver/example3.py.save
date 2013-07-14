@@ -62,8 +62,8 @@ class myHandler(BaseHTTPRequestHandler):
                 	cmd = cmd + form["lon"].value + " "
                 	cmd = cmd + form["type"].value + " "
                 	cmd = cmd + form["out"].value
-                	f = popen(cmd)
-                	now = f.read()
+                	#f = popen(cmd)
+                	#now = f.read()
 			dfs_cmd = "/usr/local/hadoop/bin/hadoop dfs -cat " + "/user/hduser/vikram/" + form["out"].value + "/part-00000" + " > /home/hduser/data/tmp/test"
 			f = popen(dfs_cmd)
 			print dfs_cmd
@@ -73,14 +73,13 @@ class myHandler(BaseHTTPRequestHandler):
 			self.send_header('Content-type','text/html')
                         self.end_headers()
 			print ins.name
-			self.wfile.write("<h1>Result of the Query</h1>" +  "<br>")
-			for line in reversed(list(ins)):
+			self.wfile.write(rest.split(':')[1])
+			for line in ins :
 				print line
 				amenity = line.split()
 				rest = " ".join(amenity[1:])
 				self.wfile.write(rest.split(':')[1])
 				self.wfile.write("<br>")
-			ins.close()
 			return			
 			
 			
