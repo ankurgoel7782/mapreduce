@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Acme Boards programming examples
 
 This is a collection of programming examples for:
@@ -15,3 +16,7 @@ To install and run these examples on your Acme Board follow this tutorial:
 * **\ablib** Python module to easily manage the I/O lines and Daisy modules
 * **\python** Examples in Python
 * **\test** Factory test utilities
+=======
+mapreduce
+=========
+>>>>>>> 276acb2b38fe002ede12e0785587d7146339f302
